@@ -47,8 +47,18 @@
             "id": 1209650696069324851,
             "name": "Daily Drawing 2024-02-21",
             "archived": false,
-            "members": [],
-            "messages": []
+            "members": [
+                "chapke"
+            ],
+            "messages": [
+                {
+                    "time": "2024-02-21T13:18:00.838000+00:00",
+                    "user": "chapke",
+                    "content": "Test",
+                    "attachment": [],
+                    "isImage": false
+                }
+            ]
         }
     ]
 }
