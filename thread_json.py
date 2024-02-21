@@ -100,7 +100,7 @@ def get_stats(message: discord.message):
         "total_images": 0,
         "how_many_days": 0,
         "longest_streak": 0,
-        "first_imae": "",
+        "first_image": "",
         "last_image": ""
     }
 
@@ -113,13 +113,13 @@ def get_stats(message: discord.message):
                 if message['user'] == user:
                     stats["total_messages"] += 1
                     if message['isImage']:
-                        if stats["first_imae"] == "":
-                            stats["first_imae"] = message.Attachment[0]
-                        stats["last_image"] = message.Attachment[0]
+                        if stats["first_image"] == "":
+                            stats["first_image"] = message["attachment"]
+                        stats["last_image"] = message["attachment"]
                         stats["total_images"] += 1
         else:
             if current_streak > stats["longest_streak"]:
                 stats["longest_streak"] = current_streak
             current_streak = 0
     
-    return f"User: {stats['user']}\nTotal messages: {stats['total_messages']}\nTotal images: {stats['total_images']}\nHow many days: {stats['how_many_days']}\nLongest streak: {stats['longest_streak']} days\n", stats['first_imae'], stats['last_image']
+    return f"User: {stats['user']}\nTotal messages: {stats['total_messages']}\nTotal images: {stats['total_images']}\nHow many days: {stats['how_many_days']}\nLongest streak: {stats['longest_streak']} days\n", stats['first_image'], stats['last_image']
