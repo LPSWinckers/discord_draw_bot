@@ -85,3 +85,41 @@ def get_all_images(message: discord.message):
     if len(images) == 0:
         return False
     return images
+
+
+def get_stats(message: discord.message):
+    if len(message.content.split(' ')) == 1:
+        user = message.author.name
+    else:
+        user = message.content.split(' ')[1]
+
+    data = open_json()
+    stats = {
+        "user": user,
+        "total_messages": 0,
+        "total_images": 0,
+        "how_many_days": 0,
+        "longest_streak": 0,
+        "first_imae": "",
+        "last_image": ""
+    }
+
+    current_streak = 0
+    for thread in data['threads']:
+        if user in thread['members']:
+            stats["how_many_days"] += 1
+            current_streak += 1
+            for message in thread['messages']:
+                if message['user'] == user:
+                    stats["total_messages"] += 1
+                    if message['isImage']:
+                        if stats["first_imae"] == "":
+                            stats["first_imae"] = message.Attachment[0]
+                        stats["last_image"] = message.Attachment[0]
+                        stats["total_images"] += 1
+        else:
+            if current_streak > stats["longest_streak"]:
+                stats["longest_streak"] = current_streak
+            current_streak = 0
+    
+    return f"User: {stats['user']}\nTotal messages: {stats['total_messages']}\nTotal images: {stats['total_images']}\nHow many days: {stats['how_many_days']}\nLongest streak: {stats['longest_streak']} days\n", stats['first_imae'], stats['last_image']

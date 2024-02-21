@@ -4,7 +4,7 @@ import discord
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 from daily_treads import daily_job
-from thread_json import add_message_to_json, get_all_images, close_thread
+from thread_json import add_message_to_json, get_all_images, get_stats, close_thread
 import json
 
 config = json.load(open('config.json'))
@@ -48,6 +48,13 @@ async def on_message(message):
             await message.author.send("date: " + image_message["time"][:10] + " user: " + image_message["user"])
             for image in image_message["attachment"]:
                 await message.author.send(image)
+
+    if message.content.split()[0] == '-stats':
+        stats, first_image, last_image = get_stats(message)
+        await message.author.send(stats)
+        await message.author.send("first image: " + first_image)
+        await message.author.send("last image: " + last_image)
+
 
 @client.event
 async def on_thread_update(before, after):
