@@ -1,46 +1,62 @@
 {
     "threads": [
         {
-            "id": 1209496429291372574,
+            "id": 1209592059892342864,
             "name": "Daily Drawing 2024-02-20",
             "archived": false,
             "members": [
-                "chapke"
+                "chapke",
+                "lieutenant_god"
             ],
             "messages": [
                 {
-                    "time": "2024-02-20T14:35:49.023000+00:00",
+                    "time": "2024-02-20T20:07:52.213000+00:00",
                     "user": "chapke",
                     "content": "test",
                     "attachment": [],
                     "isImage": false
                 },
                 {
-                    "time": "2024-02-20T14:37:18.019000+00:00",
+                    "time": "2024-02-20T20:15:03.282000+00:00",
+                    "user": "lieutenant_god",
+                    "content": "Ben benieuwd, moet alleen kijken of ik elke dag tijd heb \u00fcberhaupt",
+                    "attachment": [],
+                    "isImage": false
+                },
+                {
+                    "time": "2024-02-20T23:42:33.695000+00:00",
                     "user": "chapke",
                     "content": "",
                     "attachment": [
-                        "https://cdn.discordapp.com/attachments/1209496429291372574/1209509087398854717/IMG_5390.jpg?ex=65e72e1e&is=65d4b91e&hm=83f88ed42e0af31c96f53f57a1ce26544bbd198cb1c4beeab8c808bbee7ae528&"
+                        "https://cdn.discordapp.com/attachments/1209592059892342864/1209646306574991400/IMG_5398.jpg?ex=65e7ade9&is=65d538e9&hm=97a2ca92361e87bc24860dd2bb30c825250f358f914805090ea117786797efc4&"
                     ],
                     "isImage": true
                 },
                 {
-                    "time": "2024-02-20T14:38:55.776000+00:00",
+                    "time": "2024-02-20T23:47:16.644000+00:00",
                     "user": "chapke",
                     "content": "",
                     "attachment": [
-                        "https://cdn.discordapp.com/attachments/1209496429291372574/1209509497144606790/IMG_5390.jpg?ex=65e72e7f&is=65d4b97f&hm=c3b6374bbe4e22b64886dd27da8af88926c27b6c77d2d77fdea4b4012db0b048&"
+                        "https://cdn.discordapp.com/attachments/1209592059892342864/1209647493378211891/IMG_5390.jpg?ex=65e7af04&is=65d53a04&hm=c3e48f07d1fbd9f8dca9d71d90112d452722b381941f88a016f6f408da96ae14&"
                     ],
                     "isImage": true
-                },
+                }
+            ]
+        },
+        {
+            "id": 1209650696069324851,
+            "name": "Daily Drawing 2024-02-21",
+            "archived": false,
+            "members": [
+                "chapke"
+            ],
+            "messages": [
                 {
-                    "time": "2024-02-20T14:39:22.189000+00:00",
+                    "time": "2024-02-21T13:18:00.838000+00:00",
                     "user": "chapke",
-                    "content": "",
-                    "attachment": [
-                        "https://cdn.discordapp.com/attachments/1209496429291372574/1209509608176226324/IMG_5390.jpg?ex=65e72e9a&is=65d4b99a&hm=d53fd40d1dcd412de0d3227268fdf822c814683f875a1059578929c12a6fdc02&"
-                    ],
-                    "isImage": true
+                    "content": "Test",
+                    "attachment": [],
+                    "isImage": false
                 }
             ]
         }

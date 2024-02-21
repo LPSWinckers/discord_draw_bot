@@ -52,11 +52,10 @@ async def on_message(message):
     if message.content.split()[0] == '-stats':
         stats, first_image, last_image = get_stats(message)
         await message.author.send(stats)
-        await message.author.send("first image: ")
-        await message.author.send(first_image[0])
+        await message.author.send("first image:")
+        await message.author.send(first_image)
         await message.author.send("last image: ")
-        await message.author.send(last_image[0])
-
+        await message.author.send(last_image)
 
 @client.event
 async def on_thread_update(before, after):

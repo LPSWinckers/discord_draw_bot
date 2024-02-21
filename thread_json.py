@@ -121,5 +121,7 @@ def get_stats(message: discord.message):
             if current_streak > stats["longest_streak"]:
                 stats["longest_streak"] = current_streak
             current_streak = 0
+    if current_streak > stats["longest_streak"]:
+        stats["longest_streak"] = current_streak
     
     return f"User: {stats['user']}\nTotal messages: {stats['total_messages']}\nTotal images: {stats['total_images']}\nHow many days: {stats['how_many_days']}\nLongest streak: {stats['longest_streak']} days\n", stats['first_image'], stats['last_image']
