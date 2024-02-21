@@ -5,7 +5,7 @@ from thread_json import add_thread
 async def daily_job(client: discord.Client):
     channels = client.get_all_channels()
     for channel in channels:
-        if channel.name == "daily-drawings":
+        if channel.name == "daily-drawing":
             date = datetime.now().strftime("%Y-%m-%d")
             await create_tread(channel, name=f"Daily Drawing {date}")
 
